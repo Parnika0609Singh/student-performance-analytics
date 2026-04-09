@@ -22,6 +22,9 @@ Student Performance Dataset (UCI / Kaggle)
 ## Dashboard Preview
 <img width="1657" height="798" alt="dashboard" src="https://github.com/user-attachments/assets/110d8705-5ee1-4720-b7ab-ba27e3a580cb" />
 
+## Live Dashboard
+[View Tableau Dashboard](https://public.tableau.com/views/Book1_17757169983750/StudentPerformanceAnalyticsDashboard?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
 ## Tech Stack
 - Python
 - Pandas
