@@ -19,6 +19,9 @@ Student Performance Dataset (UCI / Kaggle)
 - Study hours and marks show strong correlation
 - Attendance moderately impacts performance
 
+## Dashboard Preview
+<img width="1657" height="798" alt="dashboard" src="https://github.com/user-attachments/assets/110d8705-5ee1-4720-b7ab-ba27e3a580cb" />
+
 ## Tech Stack
 - Python
 - Pandas
