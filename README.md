@@ -45,7 +45,7 @@ python main.py
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 student-analytics-dashboard/
 │── data/
@@ -57,10 +57,10 @@ student-analytics-dashboard/
 
 ---
 
-## 🎯 Conclusion
+##  Conclusion
 This project demonstrates how data analytics and statistical methods can be used to monitor academic performance and identify students who may require intervention.
 
 ---
 
-## 👤 Author
+##  Author
 Parnika Singh
