@@ -1,6 +1,5 @@
 import pandas as pd
 
-# Load dataset (IMPORTANT: sep=';' for this dataset)
 df = pd.read_csv("data/student-mat.csv", sep=';')
 
 print("First 5 rows:")
@@ -9,39 +8,41 @@ print(df.head())
 print("\nColumns:")
 print(df.columns)
 
-# Create KPI columns
+#KPI Columns
 df['attendance'] = 100 - df['absences']
 df['study_hours'] = df['studytime'] * 2
 df['marks'] = df['G3']
 
-# Keep only required columns
 df = df[['attendance', 'study_hours', 'marks']]
 
 print("\nTransformed Data:")
 print(df.head())
 
-# Clean data
+#Data Cleaning
 df = df.dropna()
 df = df[df['attendance'] >= 0]
 
 print("\nAfter cleaning:", df.shape)
 
-# Performance score
+#Performance score
 df['performance_score'] = (
     0.4 * df['attendance'] +
     0.3 * df['study_hours'] * 10 +
     0.3 * df['marks'] * 5
 )
 
+
 print("\nWith Performance Score:")
 print(df.head())
 
-# Identify at-risk students
+print(df['performance_score'].hist())
+
+#At-risk students
 threshold = df['performance_score'].mean() - df['performance_score'].std()
 
 df['at_risk'] = df['performance_score'] < threshold
 
-# Percentage of at-risk students
+#Percentage of at-risk students
 risk_percent = df['at_risk'].mean() * 100
 
 print("\nAt-Risk Students %:", risk_percent)
@@ -51,21 +52,21 @@ print(df.corr())
 
 import matplotlib.pyplot as plt
 
-# Marks Distribution
+#Marks Distribution
 plt.hist(df['marks'], bins=20)
 plt.title("Marks Distribution")
 plt.xlabel("Marks")
 plt.ylabel("Frequency")
 plt.show()
 
-# Attendance vs Marks
+#Attendance vs Marks
 plt.scatter(df['attendance'], df['marks'])
 plt.title("Attendance vs Marks")
 plt.xlabel("Attendance")
 plt.ylabel("Marks")
 plt.show()
 
-# At-Risk Students
+#At-Risk Students
 df['at_risk'].value_counts().plot(kind='bar')
 plt.title("At-Risk Students")
 plt.show()
