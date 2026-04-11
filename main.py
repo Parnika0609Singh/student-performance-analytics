@@ -35,7 +35,6 @@ df['performance_score'] = (
 print("\nWith Performance Score:")
 print(df.head())
 
-print(df['performance_score'].hist())
 
 #At-risk students
 threshold = df['performance_score'].mean() - df['performance_score'].std()
